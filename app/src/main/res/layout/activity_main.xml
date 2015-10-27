@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.nvanbenschoten.motion.ParallaxImageView
+        android:id="@+id/background"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/background"
+        android:scaleType="centerCrop"/>
+
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#55000000"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:id="@+id/watch"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/watch"
+        android:tint="#fff"
+        android:layout_margin="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/instruction"/>
+
+    <TextView
+        android:id="@+id/instruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Touch Deepaks Watch to unlock"
+        android:layout_above="@+id/phone_time"
+        android:textColor="#88ffffff"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/phone_model"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:text="Samsung Note II"
+        android:textColor="#55ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/phone_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="46dp"
+        android:text="3:30 PM"
+        android:textColor="#fff"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/phone_battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_margin="16dp"
+        android:text="28% remaining"
+        android:textColor="#fff"
+        android:layout_below="@+id/phone_time"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:onClick="unlockScreen"
+        android:text="UNLOCK"
+        android:textSize="8dp"
+        android:background="@drawable/abc_ab_share_pack_mtrl_alpha"
+        android:layout_width="wrap_content"
+        android:visibility="invisible"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/lock"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/lock"
+        android:layout_above="@+id/phone_model"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+
+        android:tint="#99ffffff"/>
+
+    <TextView
+        android:id="@+id/copyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="© Deepak Baliga"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="4dp"
+        android:textSize="8dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#77ffffff"/>
+
+</RelativeLayout>
